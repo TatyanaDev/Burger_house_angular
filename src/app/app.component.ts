@@ -1,6 +1,15 @@
 import { FormBuilder, Validators } from '@angular/forms'
 import { Component } from '@angular/core'
 
+interface Burger {
+  image: string
+  title: string
+  description: string
+  price: number
+  basePrice: number
+  weight: number
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,7 +25,7 @@ export class AppComponent {
     phone: ['', Validators.required]
   })
 
-  burgers = [
+  burgers: Burger[] = [
     {
       image: 'burger-cheddar&bacon.png',
       title: 'Бургер чеддер & бекон',
@@ -129,12 +138,12 @@ export class AppComponent {
 
   constructor (private fb: FormBuilder) {}
 
-  scrollTo (target: HTMLElement, burger?: any) {
+  scrollTo (target: HTMLElement, burger?: Burger) {
     target.scrollIntoView({ behavior: 'smooth' })
 
     if (burger) {
       this.form.patchValue({
-        order: burger.title + ' (' + burger.price + ' ' + this.currency + ')'
+        order: `${burger.title} (${burger.price} ${this.currency})`
       })
     }
   }
@@ -175,8 +184,8 @@ export class AppComponent {
     this.currency = newCurrency
 
     this.burgers.forEach(
-      (burger: any) =>
-        (burger.price = (burger.basePrice * coefficient).toFixed(2))
+      (burger: Burger) =>
+        (burger.price = parseFloat((burger.basePrice * coefficient).toFixed(2)))
     )
   }
 }
