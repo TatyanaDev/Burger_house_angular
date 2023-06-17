@@ -109,7 +109,7 @@
             <div>
               <button
                 class="button product-button"
-                (click)="scrollTo(ordering)"
+                (click)="scrollTo(ordering, burger)"
               >
                 <span>Заказать</span>
                 <svg
@@ -155,7 +155,7 @@
               (form.get('order')?.dirty || form.get('order')?.touched)
           }"
         >
-          <input type="text" placeholder="Ваш заказ" formControlName="order" />
+          <input type="text" placeholder="Выберите товар в списке" formControlName="order" readonly/>
         </div>
         <div
           class="order-form-input"
