@@ -94,17 +94,17 @@
       <div class="products-item" *ngFor="let burger of burgers">
         <div>
           <img
-            src="../assets/images/{{ burger.image }}"
+            src="{{ burger.image }}"
             alt="{{ burger.title }}"
           />
           <div class="common-item-title">{{ burger.title }}</div>
-          <p class="common-item-text">{{ burger.description }}</p>
+          <p class="common-item-text">{{ burger.text }}</p>
           <div class="products-item-extra">
             <div>
               <div class="products-item-price">
                 {{ burger.price }} {{ currency }}
               </div>
-              <div class="products-item-weight">{{ burger.weight }} гр</div>
+              <div class="products-item-weight">{{ burger.grams }} гр</div>
             </div>
             <div>
               <button
