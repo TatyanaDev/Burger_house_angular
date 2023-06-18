@@ -22,7 +22,7 @@ export class AppService {
   constructor (private http: HttpClient) {}
 
   getData () {
-    return this.http.get<Burger[]>('https://testologia.site/burgers-data')
+    return this.http.get<Burger[]>('https://testologia.site/burgers-data?extra=black')
   }
 
   sendOrder (orderData: Partial<OrderData>) {
