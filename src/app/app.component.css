@@ -133,6 +133,14 @@
   border-radius: 16px;
 }
 
+.products-item-image {
+  transition: all .5s ease;
+}
+
+.products-item-image:hover {
+  transform: scale(1.1);
+}
+
 .products-item-extra {
   display: flex;
   justify-content: space-between;
@@ -242,4 +250,139 @@
 .rights {
   font-size: 16px;
   line-height: 20px;
+}
+
+.loader {
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  background: #191411;
+}
+
+.loader lottie-player {
+  display: block;
+  width: 300px;
+  height: 300px;
+}
+
+.loader.showed {
+  opacity: 1;
+}
+
+@media screen and (max-width: 1225px) {
+  .main,
+  .products,
+  .order {
+    background: none;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .header .container {
+    flex-wrap: wrap-reverse;
+    max-width: 420px;
+    justify-content: center;
+  }
+
+  .header .logo {
+    order: 1;
+  }
+
+  .menu {
+    margin-top: 20px;
+  }
+
+  .menu-list {
+    min-width: calc(100vw - 30px);
+  }
+
+  .menu-item {
+    margin: 0 5px;
+    text-align: center;
+  }
+
+  .currency {
+    margin-left: 20px;
+    order: 2;
+  }
+
+  .main-image {
+    z-index: -1;
+    opacity: 0.4;
+  }
+
+  .why-items {
+    grid-template-columns: auto;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .products-items {
+    grid-template-columns: repeat(auto-fill, minmax(290px, 384px));
+    justify-content: center;
+  }
+
+  .products-item-image {
+    height: auto;
+  }
+
+  .order {
+    padding-bottom: 20px;
+  }
+
+  .order-image {
+    width: 800px;
+  }
+
+  .order-form {
+    margin: 0 auto;
+    max-width: 426px;
+    width: auto;
+    padding: 20px;
+  }
+
+  .order-form-input {
+    max-width: 100%;
+    width: auto;
+  }
+
+  .order-form-input input {
+    width: calc(100% - 2px);
+  }
+
+  .order-form-inputs .button {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .main-title {
+    font-size: 65px;
+    margin-top: 20px;
+    line-height: 75px;
+  }
+
+  .common-title {
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  .footer .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .rights {
+    margin-top: 20px;
+  }
 }
