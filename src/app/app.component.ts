@@ -16,6 +16,7 @@ export interface Burger {
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"],
 })
+
 export class AppComponent {
   orderImageStyle!: { transform: string };
   mainImageStyle!: { transform: string };
