@@ -2,7 +2,7 @@
   <header class="header">
     <div class="container">
       <div class="logo">
-        <img src="../assets/icons/logo.png" alt="Burger house logo" />
+        <img src="assets/icons/logo.png" alt="Burger house logo" />
       </div>
       <nav class="menu">
         <ul class="menu-list">
@@ -40,7 +40,7 @@
         </div>
       </div>
       <img
-        src="../assets/images/main-burger.png"
+        src="assets/images/main-burger.png"
         alt="Main burger"
         class="main-image"
         [ngStyle]="mainImageStyle"
@@ -55,7 +55,7 @@
 
     <div class="why-items">
       <div class="why-item">
-        <img src="../assets/images/burger.png" alt="Burger" />
+        <img src="assets/images/burger.png" alt="Burger" />
         <div class="common-item-title">Авторские рецепты</div>
         <p class="common-item-text">
           Наши бургеры обладают уникальным сочетанием вкусов и не похожи
@@ -65,7 +65,7 @@
       </div>
 
       <div class="why-item">
-        <img src="../assets/images/meat.png" alt="Meat" />
+        <img src="assets/images/meat.png" alt="Meat" />
         <div class="common-item-title">Мраморная говядина</div>
         <p class="common-item-text">
           Для наших бургеров мы используем отборную 100% мраморную говядину,
@@ -75,7 +75,7 @@
       </div>
 
       <div class="why-item">
-        <img src="../assets/images/food-truck.png" alt="Food truck" />
+        <img src="assets/images/food-truck.png" alt="Food truck" />
         <div class="common-item-title">Быстрая доставка</div>
         <p class="common-item-text">
           Мы доставляем в пределах города за 60 минут, а если не успеем —
@@ -95,8 +95,8 @@
       <div class="products-item" *ngFor="let burger of burgers">
         <img
           class="products-item-image"
-          src="{{ burger.image }}"
-          alt="{{ burger.title }}"
+          [src]="apiUrl + burger.image"
+          [alt]="burger.title"
         />
         <div class="common-item-title">{{ burger.title }}</div>
         <p class="common-item-text">{{ burger.text }}</p>
@@ -137,7 +137,7 @@
   <div class="container">
     <h4 class="common-title">Оформление заказа</h4>
     <img
-      src="../assets/images/order-image.png"
+      src="assets/images/order-image.png"
       alt="Burger in the box"
       class="order-image"
       [ngStyle]="orderImageStyle"
@@ -150,10 +150,8 @@
       <div class="order-form-inputs" [formGroup]="form">
         <div
           class="order-form-input"
-          [class]="{
-            error:
-              form.get('order')?.invalid &&
-              (form.get('order')?.dirty || form.get('order')?.touched)
+          [ngClass]="{
+            'error': form.get('order')?.invalid && (form.get('order')?.dirty || form.get('order')?.touched)
           }"
         >
           <input
@@ -165,20 +163,16 @@
         </div>
         <div
           class="order-form-input"
-          [class]="{
-            error:
-              form.get('name')?.invalid &&
-              (form.get('name')?.dirty || form.get('name')?.touched)
+          [ngClass]="{
+            'error': form.get('name')?.invalid && (form.get('name')?.dirty || form.get('name')?.touched)
           }"
         >
           <input type="text" placeholder="Ваше имя" formControlName="name" />
         </div>
         <div
           class="order-form-input"
-          [class]="{
-            error:
-              form.get('phone')?.invalid &&
-              (form.get('phone')?.dirty || form.get('phone')?.touched)
+          [ngClass]="{
+            'error': form.get('phone')?.invalid && (form.get('phone')?.dirty || form.get('phone')?.touched)
           }"
         >
           <input
@@ -198,15 +192,15 @@
 <footer class="footer">
   <div class="container">
     <div class="logo">
-      <img src="../assets/icons/logo.png" alt="Burger house logo" />
+      <img src="assets/icons/logo.png" alt="Burger house logo" />
     </div>
     <div class="rights">Все права защищены</div>
   </div>
 </footer>
 
-<div class="loader" [class]="{ showed: loaderShowed }" *ngIf="loader">
+<div class="loader" [ngClass]="{ showed: loaderShowed }" *ngIf="loader">
   <lottie-player
-    src="../assets/burger.json"
+    src="assets/burger.json"
     background="transparent"
     speed="1.5"
     autoplay
