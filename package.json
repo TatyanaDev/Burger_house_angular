@@ -9,7 +9,7 @@
     "dev": "concurrently \"npm run dev:backend\" \"npm run start:frontend\""
   },
   "keywords": [],
-  "author": "",
+  "author": "Tatyana Karpenko",
   "license": "ISC",
   "description": "",
   "devDependencies": {

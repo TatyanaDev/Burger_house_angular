@@ -1,0 +1,20 @@
+{
+  "name": "burger_house_angular-backend",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node ./server.js",
+    "dev": "nodemon ./server.js"
+  },
+  "keywords": [],
+  "author": "Tatyana Karpenko",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "dotenv": "^16.5.0",
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
