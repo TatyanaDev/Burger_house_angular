@@ -1,5 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { environment } from '../environments/environment';
 import { Burger } from "./app.component";
 
 interface Response {
@@ -22,13 +23,13 @@ export class AppService {
 
   getData() {
     return this.http.get<Burger[]>(
-      "https://testologia.site/burgers-data?extra=black"
+      `${environment.apiUrl}/api/burgers-data?extra=black`
     );
   }
 
   sendOrder(orderData: Partial<OrderData>) {
     return this.http.post<Response>(
-      "https://testologia.site/burgers-order",
+      `${environment.apiUrl}/api/burgers-order`,
       orderData
     );
   }

@@ -1,5 +1,6 @@
 import { FormBuilder, Validators } from "@angular/forms";
 import { Component, HostListener } from "@angular/core";
+import { environment } from '../environments/environment';
 import { AppService } from "./app.service";
 
 export interface Burger {
@@ -20,6 +21,7 @@ export interface Burger {
 export class AppComponent {
   orderImageStyle!: { transform: string };
   mainImageStyle!: { transform: string };
+  apiUrl = environment.apiUrl;
   currency: string = "$";
   burgers: Burger[] = [];
   loaderShowed = true;
