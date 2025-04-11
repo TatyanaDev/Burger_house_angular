@@ -1,8 +1,8 @@
 .main {
-  overflow: hidden;
   background-image: url("../assets/images/main-bg.png");
   background-position: top center;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .header {
@@ -10,9 +10,9 @@
 }
 
 .header .container {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  display: flex;
 }
 
 .logo img {
@@ -20,17 +20,17 @@
 }
 
 .menu-list {
-  list-style: none;
-  display: flex;
   justify-content: space-between;
   min-width: 600px;
+  list-style: none;
+  display: flex;
 }
 
 .menu-item a {
-  font-size: 18px;
-  color: inherit;
   text-decoration: none;
+  font-size: 18px;
   cursor: pointer;
+  color: inherit;
 }
 
 .menu-item a:hover {
@@ -39,13 +39,13 @@
 
 .currency {
   border: 1px solid #ffffff;
-  border-radius: 5px;
-  width: 45px;
-  height: 45px;
   text-align: center;
-  cursor: pointer;
-  user-select: none;
+  border-radius: 5px;
   line-height: 45px;
+  user-select: none;
+  cursor: pointer;
+  height: 45px;
+  width: 45px;
 }
 
 .main-content {
@@ -71,17 +71,17 @@
 
 .main-title {
   font-family: "Merriweather", sans-serif;
-  font-size: 120px;
-  line-height: 156px;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
+  letter-spacing: 0.03em;
   margin-bottom: 56px;
+  line-height: 156px;
+  font-size: 120px;
 }
 
 .main-text {
-  font-size: 24px;
-  line-height: 29px;
   margin-bottom: 56px;
+  line-height: 29px;
+  font-size: 24px;
 }
 
 .button.main-button {
@@ -89,9 +89,9 @@
 }
 
 .main-image {
+  left: calc(100% - 991px);
   position: absolute;
   top: -123px;
-  left: calc(100% - 991px);
 }
 
 .why {
@@ -102,10 +102,10 @@
 }
 
 .why-items {
-  display: grid;
-  gap: 100px;
   grid-template-columns: repeat(3, 312px);
   justify-content: center;
+  display: grid;
+  gap: 100px;
 }
 
 .why-item {
@@ -116,25 +116,25 @@
   background-image: url("../assets/images/burgers-bg.png");
   background-position: top center;
   background-repeat: no-repeat;
-  padding-bottom: 180px;
   background-size: 1400px;
+  padding-bottom: 180px;
 }
 
 .products-items {
-  display: grid;
   grid-template-columns: repeat(3, 384px);
+  display: grid;
   gap: 24px;
 }
 
 .products-item {
-  padding: 30px;
-  background: #211a16;
   border: 1px solid #353535;
+  background: #211a16;
   border-radius: 16px;
+  padding: 30px;
 }
 
 .products-item-image {
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 .products-item-image:hover {
@@ -142,28 +142,28 @@
 }
 
 .products-item-extra {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 24px;
+  display: flex;
 }
 
 .products-item-price {
-  font-size: 32px;
-  line-height: 39px;
   margin-bottom: 8px;
+  line-height: 39px;
+  font-size: 32px;
 }
 
 .products-item-weight {
-  font-size: 16px;
   line-height: 19px;
   color: #757575;
+  font-size: 16px;
 }
 
 .button.product-button {
+  align-items: center;
   padding: 19px 35px;
   display: flex;
-  align-items: center;
 }
 
 .button.product-button span {
@@ -179,37 +179,37 @@
 }
 
 .order-image {
-  position: absolute;
-  top: 0;
   right: calc(100% - 764px);
+  position: absolute;
   z-index: -1;
+  top: 0;
 }
 
 .order-form {
-  background: #211a16;
   border: 1px solid #353535;
-  border-radius: 16px;
-  max-width: 424px;
   padding: 36px 40px 60px;
+  background: #211a16;
+  border-radius: 16px;
   margin-left: 674px;
   text-align: center;
+  max-width: 424px;
 }
 
 .order-form-inputs {
-  display: flex;
   flex-direction: column;
   margin-top: 16px;
+  display: flex;
 }
 
 .order-form-input {
   background: linear-gradient(95.61deg, #da8023 0%, #e2b438 100%);
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  display: flex;
   width: 344px;
   height: 62px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .order-form-input.error {
@@ -217,14 +217,14 @@
 }
 
 .order-form-input input {
-  padding: 20px 10px;
+  border: 1px solid transparent;
   background: #211a16;
+  padding: 20px 10px;
   border-radius: 8px;
+  color: #ffffff;
+  outline: none;
   width: 342px;
   height: 60px;
-  outline: none;
-  border: 1px solid transparent;
-  color: #ffffff;
 }
 
 .order-form-inputs button {
@@ -232,9 +232,9 @@
 }
 
 .order-form-inputs button:disabled {
+  background: #343434;
   cursor: not-allowed;
   color: #808080;
-  background: #343434;
 }
 
 .footer {
@@ -242,33 +242,33 @@
 }
 
 .footer .container {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  display: flex;
 }
 
 .rights {
-  font-size: 16px;
   line-height: 20px;
+  font-size: 16px;
 }
 
 .loader {
-  top: 0;
-  width: 100vw;
-  height: 100vh;
+  transition: opacity 0.3s ease-in-out;
+  justify-content: center;
+  background: #191411;
+  align-items: center;
   position: fixed;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100vh;
+  width: 100vw;
   opacity: 0;
-  transition: opacity .3s ease-in-out;
-  background: #191411;
+  top: 0;
 }
 
 .loader lottie-player {
   display: block;
-  width: 300px;
   height: 300px;
+  width: 300px;
 }
 
 .loader.showed {
@@ -288,8 +288,8 @@
 
   .header .container {
     flex-wrap: wrap-reverse;
-    max-width: 420px;
     justify-content: center;
+    max-width: 420px;
   }
 
   .header .logo {
@@ -305,8 +305,8 @@
   }
 
   .menu-item {
-    margin: 0 5px;
     text-align: center;
+    margin: 0 5px;
   }
 
   .currency {
@@ -315,15 +315,15 @@
   }
 
   .main-image {
-    z-index: -1;
     opacity: 0.4;
+    z-index: -1;
   }
 
   .why-items {
     grid-template-columns: auto;
-    max-width: 500px;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
+    max-width: 500px;
   }
 
   .products-items {
@@ -344,10 +344,10 @@
   }
 
   .order-form {
-    margin: 0 auto;
     max-width: 426px;
-    width: auto;
+    margin: 0 auto;
     padding: 20px;
+    width: auto;
   }
 
   .order-form-input {
@@ -360,26 +360,26 @@
   }
 
   .order-form-inputs .button {
-    width: 100%;
     margin: 0 auto;
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 570px) {
   .main-title {
-    font-size: 65px;
-    margin-top: 20px;
     line-height: 75px;
+    margin-top: 20px;
+    font-size: 65px;
   }
 
   .common-title {
-    font-size: 36px;
     line-height: 46px;
+    font-size: 36px;
   }
 
   .footer .container {
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
   }
 
   .rights {

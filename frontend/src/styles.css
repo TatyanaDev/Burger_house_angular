@@ -9,14 +9,14 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  background-color: #191411;
   font-family: "Gilroy", sans-serif;
+  background-color: #191411;
   color: #ffffff;
 }
 
@@ -28,13 +28,13 @@ body {
 .button {
   background: linear-gradient(95.61deg, #da8023 0%, #e2b438 100%);
   border-radius: 8px;
-  border: 0;
-  cursor: pointer;
-  outline: none;
-  color: #191411;
-  font-size: 18px;
-  font-weight: 600;
   line-height: 22px;
+  font-weight: 600;
+  color: #191411;
+  cursor: pointer;
+  font-size: 18px;
+  outline: none;
+  border: 0;
 }
 
 button:hover {
@@ -43,21 +43,21 @@ button:hover {
 
 .common-title {
   font-family: "Merriweather", sans-serif;
-  font-size: 64px;
-  line-height: 80px;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
+  letter-spacing: 0.03em;
   margin-bottom: 60px;
   text-align: center;
+  line-height: 80px;
+  font-size: 64px;
 }
 
 .common-item-title {
-  font-size: 24px;
   line-height: 29px;
+  font-size: 24px;
   padding: 24px 0;
 }
 
 .common-item-text {
-  font-size: 16px;
   line-height: 22px;
+  font-size: 16px;
 }
