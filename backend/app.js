@@ -5,7 +5,7 @@ const burgerRoutes = require("./routes/burgers");
 
 const app = express();
 
-app.use(cors());
+app.use(cors({ origin: ["http://localhost:4200", "https://tatyanadev-burger-house.netlify.app"] }));
 
 app.use(express.json());
 
